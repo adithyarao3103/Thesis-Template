@@ -1,0 +1,137 @@
+\documentclass[12pt]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{braket}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{pdfpages}
+\usepackage{lipsum}
+\usepackage{tikz}
+\usepackage{natbib}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage[T1]{fontenc}
+\usepackage[most]{tcolorbox}
+\usepackage[pages=some]{background}
+\usepackage{etoolbox}
+\usepackage{forloop}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%    CHANGE THESE VALUES TO EDIT THE PREAMBLES 
+
+%degree details
+\def\DegreeShort{M.Sc}
+\def\Degree{Masters of Science}
+\def\Subject{Physics}
+
+%report title
+\def\Title{Gribov Ambiguity and Stochastic Quantization}
+
+%student details
+\def\Atitle{Mr.}
+\def\Author{Adithya A. Rao}
+\def\Rollno{i19ph001}
+
+%internal supervisor details
+\def\InternalSupervisor{Dr. Vikash K. Ojha}
+\def\InternalSupervisorPosition{Assistant Professor}
+\def\InternalSupervisorDept{Department of Physics}
+
+%external supervisor details
+% Comment these lines if you don't have an external supervisor
+\def\ExternalSupervisor{Prof. Laurent Baulieu}
+\def\ExternalSupervisorPosition{Professor}
+\def\ExternalSupervisorDept{Laboratoire de Physique Théorique et Hautes Energies}
+\def\ExternalSupervisorInsti{Sorbonne University}
+\def\ExternalSupervisorInstiCity{Paris}
+
+%hod details
+\def\Hod{Dr. D R Roy}
+
+%academic year
+\def\Year{2023 - 2024}
+
+%number of chapters
+\def\numChapters{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% SOME STUPID STUFF REQUIRED BY THE PROJECT TO COMPILE. DON'T TOUCH
+
+
+\backgroundsetup{
+scale=1,
+angle=0,
+opacity=1,
+contents={%
+\includegraphics[width=\paperwidth,height=\paperheight]{assets/border.jpg}}%
+}
+
+
+\newcommand\exchange[2]{#2#1}%
+\newcommand\includepatternloop[5]{%
+  \include{#5#3#1#4}%
+  \ifnum#1<\expandafter\exchange\expandafter{\number#2}{} %
+     \exchange{\expandafter\includepatternloop\expandafter{\number\numexpr#1+1\relax}{#2}{#3}{#4}{#5}}%
+  \fi
+}%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Preferences, to keep spacing 1.15 times original, and to have no space at start of new paragraph
+
+\setstretch{1.15}
+\setlength{\parindent}{0cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Add your own definitions in case you are creating any commands here
+
+\newcommand{\del}{\partial}
+\newcommand{\pp}[2]{{\displaystyle\frac{\del #1}{\del #2}}}
+\newcommand{\dd}[2]{{\displaystyle\frac{d #1}{d #2}}}
+\newcommand{\DD}[2]{{\displaystyle\frac{\delta #1}{\delta #2}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% cover page 
+\include{preamble/cover}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%preamble
+
+\pagenumbering{roman}
+
+\include{preamble/declaration}
+\include{preamble/certificate}
+\include{preamble/acknowledgement}
+\include{preamble/abstract}
+\include{preamble/toc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{page}{0}
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Body
+
+\includepatternloop{1}{\numChapters{}}{chapter}{}{Chapters/}%
+
+
+\end{document}
