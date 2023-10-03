@@ -1,7 +1,3 @@
----
-modified: 2023-10-03T13:07:36.320Z
-title: Dissertation Report Template, SVNIT
----
 
 # Dissertation Report Template, SVNIT
 
