@@ -1,14 +1,18 @@
 ---
-modified: 2023-10-03T12:49:42.115Z
+modified: 2023-10-03T13:07:36.320Z
 title: Dissertation Report Template, SVNIT
 ---
 
 # Dissertation Report Template, SVNIT
 
-The dissertation report template is written in simple latex, without creating horrendous classes or any stuff. 
+The dissertation report template is written in simple latex, without creating horrendous classes or any stupid hell of codes. 
 
-To get started, open the THESIS.tex and edit the values of your title, name etc. The preamble, i.e. cover page, declaration, certificate, etc will be automatically generated for you. 
+To get started, open the **metadata.tex** and edit the values of your title, name etc. You can add your own border by replacing the border.jpg file in **assets** folder (and rename the new file to border.jpg).
 
-Further, you can add your acknowledgement and abstract to their respective .tex files.
+Further, add your acknowledgement and abstract to their respective .tex files in the **preamble** folder.
 
-Create your thesis chapters in the folder **Chapters** in the form of chapter#.tex, and set the \numChapters to the number of chapters, and the pdf will automatically compile with all the chapters. 
+Create your thesis chapters in the folder **Chapters** in the form of chapter#.tex (i.e. chapter1.tex, chapter2.tex, ... ) please stick to the naming convention, and set the \numChapters in the metadata.tex to the number of chapters.
+
+Add your references as bibtex entries to the **references.bib** file.
+
+After this compile the **THESIS.tex** file, you will have your thesis ready. 
