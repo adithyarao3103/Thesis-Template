@@ -64,11 +64,7 @@ contents={%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Add your own definitions in case you are creating any commands here
-
-\newcommand{\del}{\partial}
-\newcommand{\pp}[2]{{\displaystyle\frac{\del #1}{\del #2}}}
-\newcommand{\dd}[2]{{\displaystyle\frac{d #1}{d #2}}}
-\newcommand{\DD}[2]{{\displaystyle\frac{\delta #1}{\delta #2}}}
+\input{definitions.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -94,9 +90,7 @@ contents={%
 \include{preamble/toc}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\thispagestyle{empty}
-\
-\newpage
+
 \setcounter{page}{0}
 \pagenumbering{arabic}
 

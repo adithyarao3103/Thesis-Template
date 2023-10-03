@@ -6,6 +6,8 @@ To get started, open the **metadata.tex** and edit the values of your title, nam
 
 Further, add your acknowledgement and abstract to their respective .tex files in the **preamble** folder.
 
+If you are adding any new commands or definitions, add them in the **definitions.tex** file.
+
 Create your thesis chapters in the folder **Chapters** in the form of chapter#.tex (i.e. chapter1.tex, chapter2.tex, ... ) please stick to the naming convention, and set the \numChapters in the metadata.tex to the number of chapters. (Adding \newpage at the beginning and end of all the chapter#.tex files is suggested).
 
 Add your references as bibtex entries to the **references.bib** file.
