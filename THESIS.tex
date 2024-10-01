@@ -24,25 +24,12 @@
 \usepackage{setspace}
 \usepackage[T1]{fontenc}
 \usepackage[most]{tcolorbox}
-\usepackage[pages=some]{background}
 \usepackage{etoolbox}
 \usepackage{forloop}
 \usepackage{afterpage}
 \usepackage{fontspec}
 \newfontfamily\CloisterBlack{CloisterBlack.ttf}
 \newfontfamily\Cancellaresca{Cancellaresca-Script.ttf}
-
-\newcommand\blankpage{%
-    \null
-    \thispagestyle{empty}%
-    \addtocounter{page}{-1}%
-    \newpage}
-
-% \newcommand\blankAfterPart{%
-%     \null
-%     \thispagestyle{empty}%
-%     % \addtocounter{page}{-1}%
-%     \newpage}
 
 \input{metadata/usepackages.tex}
 
@@ -52,16 +39,6 @@
 
 
 % SOME STUPID STUFF REQUIRED BY THE PROJECT TO COMPILE. DON'T TOUCH
-
-
-\backgroundsetup{
-scale=1,
-angle=0,
-opacity=1,
-contents={%
-\hspace{0.05\paperwidth}\includegraphics[width=0.95\paperwidth,height=\paperheight]{assets/border.jpg}}%
-}
-
 
 \newcommand\exchange[2]{#2#1}%
 \newcommand\includepatternloop[5]{%
@@ -75,7 +52,7 @@ contents={%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Preferences, to keep spacing 1.15 times original, and to have no space at start of new paragraph
+% Preferences, to keep spacing 1.5 times original for preamble pages, and to have no space at start of new paragraph
 
 \setstretch{1.15}
 \setlength{\parindent}{0cm}
@@ -112,8 +89,9 @@ contents={%
 \include{preamble/examiner_certificate}
 \include{preamble/acknowledgement}
 \include{preamble/abstract}
+
 \normalsize
-\onehalfspacing
+\onehalfspacing % General expectations is to keep one half spacing in the thesis
 \include{preamble/toc}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -124,12 +102,15 @@ contents={%
 
 % Body
 \pagestyle{fancy}
-% \setboolean{@twoside}{true} 
 \includepatternloop{1}{\numChapters{}}{chapter}{}{Chapters/}%
 
 \newpage
 \addcontentsline{toc}{chapter}{List of Figures}
 \listoffigures
+
+\newpage
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -142,11 +123,19 @@ contents={%
 
 \bibliography{metadata/references.bib}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Appendix 
+
+
+\ifnum 0=\numAppendix{}
+\else%
+\appendix
+\includepatternloop{1}{\numAppendix{}}{appendix}{}{Appendix/}%
+\fi
+
+
 \newpage
 \thispagestyle{empty}
-% \addtocontents{toc}{\protect \contentsline {chapter}{Certificate}{iii}{}}
-% \includepdf[pages={1}]{preamble/scanned.pdf}
-% \includepdf[pages={2,3,4}]{preamble/scanned.pdf}
 \input{preamble/plagiarism_declaration.tex}
 
 \end{document}

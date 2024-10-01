@@ -1,15 +1,19 @@
 # Dissertation Report Template, SVNIT
 
-The dissertation report template is written in simple latex, without creating horrendous classes or any stupid hell of codes. 
+The dissertation report template for SVNIT is written in simple latex, without creating horrendous classes or any stupid hell of codes. 
 
-To get started, open the **details.tex** in **metadata** folder and edit the values of your title, name etc. You can add your own border by replacing the border.jpg file in **assets** folder (and rename the new file to border.jpg).
+To get started, open the `details.tex` in `metadata` folder and edit the values of your title, name etc. If you have an external supervisor, add the certificate of completion provided by them in `assets` folder and rename it to `external_certificate.pdf`. If you don't have an external supervisor, comment out the line `\ExternalSupervisor` in the `details.tex` file.
 
-You can add your own \usepackage statements to **usepackages.tex** and also your own \newcommand or \def statements to **defintions.tex** file in the metadata folder.
+> Do not touch `THESIS.tex` or any files in `preamble` folder if you don't know what you are doing.
 
-Further, add your acknowledgement and abstract to their respective .tex files in the same folder.
+You can add your own `\usepackage` statements to `usepackages.tex` and also your own `\newcommand` or `\def` statements to `defintions.tex` file in the `metadata` folder.
 
-Create your thesis chapters in the folder **Chapters** in the form of chapter#.tex (i.e. chapter1.tex, chapter2.tex, ... ) please stick to the naming convention, and set the \numChapters in the details.tex to the number of chapters. (Adding \newpage at the beginning and end of all the chapter#.tex files is suggested).
+Further, add your acknowledgement and abstract to their respective `.tex` files in the `metadata` folder.
 
-Add your references as bibtex entries to the **references.bib** file in **metadata** folder.
+Create your thesis chapters in the folder `Chapters` in the form of `chapter#.tex` (i.e. `chapter1.tex`, `chapter2.tex`, ... ) please stick to the naming convention, and set the `\numChapters` in the details.tex to the number of chapters. (Adding \newpage at the beginning and end of all the chapter#.tex files is suggested).
 
-After this compile the **THESIS.tex** file, you will have your thesis ready. 
+If you have appendices, create `appendix#.tex` files, i.e `appendix1.tex`, `appendix2.tex`, ... and set the `\numAppendix` in the details.tex to the number of appendices.
+
+Add your references as bibtex entries to the `references.bib` file in `metadata` folder.
+
+After this compile the `THESIS.tex` file.
