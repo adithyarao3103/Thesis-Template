@@ -4,6 +4,7 @@ The dissertation report template for SVNIT is written in simple latex, without c
 
 To get started, open the `details.tex` in `metadata` folder and edit the values of your title, name etc. If you have an external supervisor, add the certificate of completion provided by them in `assets` folder and rename it to `external_certificate.pdf`. If you don't have an external supervisor, comment out the line `\ExternalSupervisor` in the `details.tex` file.
 
+> [!WARNING]
 > Do not touch `THESIS.tex` or any files in `preamble` folder if you don't know what you are doing.
 
 You can add your own `\usepackage` statements to `usepackages.tex` and also your own `\newcommand` or `\def` statements to `defintions.tex` file in the `metadata` folder.
@@ -15,5 +16,9 @@ Create your thesis chapters in the folder `Chapters` in the form of `chapter#.te
 If you have appendices, create `appendix#.tex` files, i.e `appendix1.tex`, `appendix2.tex`, ... and set the `\numAppendix` in the details.tex to the number of appendices.
 
 Add your references as bibtex entries to the `references.bib` file in `metadata` folder.
+
+> [!IMPORTANT]
+> You need to set your LaTeX compiler to LuaLaTex to compile the thesis.
+> If you are on overleaf, go to Menu on top left, and select LuaLaTeX in compiler.
 
 After this compile the `THESIS.tex` file.
