@@ -21,4 +21,7 @@ Add your references as bibtex entries to the `references.bib` file in `metadata`
 > You need to set your LaTeX compiler to LuaLaTex to compile the thesis.
 > If you are on overleaf, go to Menu on top left, and select LuaLaTeX in compiler.
 
-After this compile the `THESIS.tex` file.
+After this compile the `THESIS.tex` file to get the final pdf.
+
+> [!TIP]
+> The theme for chapter titles is set by the `fncychap` package. Make changes [here](metadata/usepackages.tex#L19) to change the theme. To find what themes are available, [check this document](http://mirrors.ctan.org/macros/latex/contrib/fncychap/fncychap.pdf). To use the default LaTeX theme, comment out the line.
