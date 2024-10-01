@@ -11,7 +11,7 @@ You can add your own `\usepackage` statements to `usepackages.tex` and also your
 
 Further, add your acknowledgement and abstract to their respective `.tex` files in the `metadata` folder.
 
-Create your thesis chapters in the folder `Chapters` in the form of `chapter#.tex` (i.e. `chapter1.tex`, `chapter2.tex`, ... ) please stick to the naming convention, and set the `\numChapters` in the details.tex to the number of chapters. (Adding \newpage at the beginning and end of all the chapter#.tex files is suggested).
+Create your thesis chapters in the folder `Chapters` in the form of `chapter#.tex` (i.e. `chapter1.tex`, `chapter2.tex`, ... ). Please stick to the naming convention. Set the `\numChapters` in the details.tex to the number of chapters. (Adding \newpage at the beginning and end of all the chapter#.tex files is suggested).
 
 If you have appendices, create `appendix#.tex` files, i.e `appendix1.tex`, `appendix2.tex`, ... and set the `\numAppendix` in the details.tex to the number of appendices.
 
