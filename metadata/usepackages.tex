@@ -1,1 +1,95 @@
 % \usepackage{} for the packages you will be needing extra
+
+\usepackage{slashed}
+\usepackage{bm}
+\usepackage{braket}
+\usepackage{amsthm}
+\usepackage[compat=1.1.0]{tikz-feynman}
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{algorithm2e}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usetikzlibrary{arrows}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% For Part Styling
+
+\usepackage{titlesec}
+\usepackage{xcoffins}
+
+\newcommand\headerdisplay[1]{%
+  \huge
+  \vskip.5\baselineskip
+  \filcenter\MakeUppercase{#1}%
+  \vskip.0\baselineskip
+}
+\NewCoffin\mytmpa
+\NewCoffin\mytmpb
+\newcommand\placeabove[3][0pt]{%
+ \SetHorizontalCoffin\mytmpa{#2}%
+ \SetHorizontalCoffin\mytmpb{#3}%
+ \JoinCoffins*\mytmpb[hc,t]\mytmpa[hc,b](0pt,#1)%
+ \TypesetCoffin\mytmpb
+}
+
+% \renewcommand\thepart{\arabic{part}}
+\titleclass{\part}{top} 
+\titleformat{\part}[frame]
+  {\normalfont\vfil}
+  {\filcenter\placeabove[2\baselineskip]{\Large PART}{\huge\enspace\thepart\enspace}}
+  {1em}
+  {\headerdisplay}[\vfil]
+\titlespacing*{\part}{0pt}{0pt}{20pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% For styling the footer of part and chapter pages
+
+\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{chapterhead}}{}{}
+\patchcmd{\part}{\thispagestyle{plain}}{\thispagestyle{empty}}{}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Styling the chapter headings
+
+% \usepackage[Sonny]{fncychap}
+% \usepackage[Bjornstrup]{fncychap}
+\usepackage[Glenn]{fncychap}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\definecolor{light}{rgb}{0.4, 0.4, 0.4}
+\def\light#1{{\color{light}#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Styling header and footer
+
+\renewcommand{\footrulewidth}{0.4pt}
+\setlength{\headheight}{15pt}
+% \fancyhead[LE]{}
+% \fancyhead[RO]{}
+\fancyhead[L]{}
+\fancyfoot[R]{}
+\fancyfoot[C]{\thepage{}}
+\fancyfoot[L]{}
+% \fancyhead[R]{\textbf{\Title{}}}
+\fancypagestyle{chapterhead}{%
+    \fancyhf{}%
+    \fancyfoot[C]{\thepage}%
+    \renewcommand{\headrulewidth}{0pt}% Line at the header invisible
+    \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{cffffff}{RGB}{255,255,255}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% For dots in TOC
+
+\usepackage{tocloft}
+\renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}} % for parts
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

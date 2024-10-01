@@ -8,12 +8,14 @@
 \documentclass[12pt]{report}
 
 \usepackage[utf8]{inputenc}
-\usepackage[margin=1in]{geometry}
+\usepackage[a4paper, margin=1in, inner=1.5in ]{geometry}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{float}
-\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage[normalem]{ulem}
+% \usepackage{hyperref}
 \usepackage{pdfpages}
 \usepackage{lipsum}
 \usepackage{tikz}
@@ -25,6 +27,22 @@
 \usepackage[pages=some]{background}
 \usepackage{etoolbox}
 \usepackage{forloop}
+\usepackage{afterpage}
+\usepackage{fontspec}
+\newfontfamily\CloisterBlack{CloisterBlack.ttf}
+\newfontfamily\Cancellaresca{Cancellaresca-Script.ttf}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
+% \newcommand\blankAfterPart{%
+%     \null
+%     \thispagestyle{empty}%
+%     % \addtocounter{page}{-1}%
+%     \newpage}
 
 \input{metadata/usepackages.tex}
 
@@ -41,7 +59,7 @@ scale=1,
 angle=0,
 opacity=1,
 contents={%
-\includegraphics[width=\paperwidth,height=\paperheight]{assets/border.jpg}}%
+\hspace{0.05\paperwidth}\includegraphics[width=0.95\paperwidth,height=\paperheight]{assets/border.jpg}}%
 }
 
 
@@ -83,17 +101,21 @@ contents={%
 %preamble
 
 \pagenumbering{roman}
-
+\ifdef{\ExternalSupervisor}{
+\addtocontents{toc}{\protect \contentsline {chapter}{External Supervisor's Certificate}{ii}{}}
+}{}
 \include{preamble/declaration}
+\ifdef{\ExternalSupervisor}{
+\includepdf[pages=-]{assets/external_certificate.pdf}
+}{}
 \include{preamble/certificate}
 \include{preamble/examiner_certificate}
 \include{preamble/acknowledgement}
 \include{preamble/abstract}
 \normalsize
-\setstretch{1.15}
+\onehalfspacing
 \include{preamble/toc}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \setcounter{page}{0}
 \pagenumbering{arabic}
@@ -101,8 +123,13 @@ contents={%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Body
-
+\pagestyle{fancy}
+% \setboolean{@twoside}{true} 
 \includepatternloop{1}{\numChapters{}}{chapter}{}{Chapters/}%
+
+\newpage
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -111,6 +138,15 @@ contents={%
 \nocite{*}
 \newpage
 \bibliographystyle{ieeetr}
+\addcontentsline{toc}{chapter}{Bibliography}
+
 \bibliography{metadata/references.bib}
+
+\newpage
+\thispagestyle{empty}
+% \addtocontents{toc}{\protect \contentsline {chapter}{Certificate}{iii}{}}
+% \includepdf[pages={1}]{preamble/scanned.pdf}
+% \includepdf[pages={2,3,4}]{preamble/scanned.pdf}
+\input{preamble/plagiarism_declaration.tex}
 
 \end{document}

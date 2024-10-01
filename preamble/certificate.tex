@@ -6,25 +6,21 @@
 
 
 \newpage
-\BgThispage{}
+% \BgThisPage{}
 
-\begin{minipage}[l]{0.2\textwidth}		
-    \makebox[150pt] \\ \vspace*{-5pt}				
-        \includegraphics[width=.7\textwidth]{assets/logo.jpg} 
-\end{minipage}				
-\begin{minipage}[r]{0.8\textwidth}		
-    {			
-        \textbf{				
-            \makebox[150pt] \\ \vspace*{-5pt}
-                \begin{flushleft}
-                    Sardar Vallabhbhai National Institute of Technology,\\
-                    Surat-395007, Gujarat, India
-                \end{flushleft}
-        }				
-    }			
-\end{minipage}
+\begin{table}
+    \centering
+    \begin{tabularx}{\textwidth}{lX}
+        \raisebox{-\height}{\includegraphics[width=1.5in]{assets/logo.png}}
+        & 
+        { {\vspace{17pt}} \raggedright\arraybackslash \Large \textbf{DEPARTMENT OF PHYSICS} \newline \normalsize Sardar Vallabhbhai National Institute of Technology (SVNIT) \newline Ichchhanath Surat- Dumas Road,
+        \newline Keval Chowk, Surat, Gujarat - 395007}\\
+        & \\ 
+        \hline
+    \end{tabularx}
+\end{table}
+\line(1,0){0}
 \begin{center}
-\vspace{20pt}
 \Large
     {
         \underline{
@@ -36,41 +32,86 @@
 \normalsize
 \end{center}
 \vspace*{20pt}		
-\setstretch{1.5}
-\Large \usefont{OT1}{pzc}{m}{n}{\textbf{					
-    \hspace*{20pt}This is to certify that the report entitled ``\Title{}'' is prepared and presented by \Atitle{} \Author{}, bearing roll number \MakeUppercase{\Rollno}, as a part of their \DegreeShort{} Dissertation and their work is satisfactory.
-    \vspace*{100pt} \\
-}}
-\normalfont{}
 
-\setstretch{1.15}
+\doublespacing
+
+\large \usefont{OT1}{pzc}{m}{n}{				
+    \begin{doublespace}
+        ~~~~~~~~This is to certify that the dissertation entitled ``\Title{}'' is a bona-fide record of the research done by \Atitle{} \Author{}, bearing roll number \MakeUppercase{\Rollno}, during the 5 Year Integrated M.Sc.\ (Physics) program at the Sardar Vallabhbhai National Institute of Technology, Surat. This dissertation is found to be complete and satisfactory in all respects. 
+    \end{doublespace}
+}
+\normalfont{}
+\onehalfspacing
+\normalsize
+\vspace{100pt}
+\begin{multicols}{2}
+    \begin{center}
+        \line(1,0){180}\\
+        {\InternalSupervisor} \\ 
+        {Internal Supervisor} \\ 
+        % {\InternalSupervisorPosition} \\ 
+        {\InternalSupervisorDept}\\
+        {SVNIT, Surat}
+    \end{center}
+    
+    \columnbreak
+
+    \begin{center}
+        \line(1,0){180}\\
+        {\Hod} \\ 
+        {Head of the Department} \\ 
+        {\InternalSupervisorDept} \\ 
+        {SVNIT, Surat}
+    \end{center}
+
+\end{multicols}
+
+\vspace{20pt}
+
+\begin{multicols}{2}
+
+        {Date: \ExamDate{}} \\ 
+        {Place: SVNIT, Surat}\\
+        ~\\~\\~    
+    \columnbreak
+    
+    
+
+\end{multicols}
+
+\addcontentsline{toc}{chapter}{Certificate}
+
+
+% \normalsize
 % \ifdef{\ExternalSupervisor}{
-%     \begin{minipage}{0.49\textwidth}
-%         \textbf{\InternalSupervisor{}\\
-%         \InternalSupervisorPosition{},\\
-%         \InternalSupervisorDept{},\\
-%         SVNIT, Surat
-%         }       
-%     \end{minipage}\begin{minipage}{0.49\textwidth}
-%         \begin{flushright}
+%     \begin{minipage}{0.4\textwidth}
+%         \begin{center}
+%             \textbf{\InternalSupervisor{}\\
+%             \InternalSupervisorPosition{},\\
+%             \InternalSupervisorDept{},\\
+%             SVNIT, Surat\\~~
+%             }
+%         \end{center}      
+%     \end{minipage}\begin{minipage}{0.18\textwidth}~~\end{minipage}\begin{minipage}{0.41\textwidth}
+%         \begin{center}
 %             \textbf{\ExternalSupervisor{}\\
 %             \ExternalSupervisorPosition{},\\
 %             \ExternalSupervisorDept{},\\
 %             \ExternalSupervisorInsti{},
 %             \ExternalSupervisorInstiCity{}\\}
-%         \end{flushright}
+%         \end{center}
 %     \end{minipage}
 % \vspace{80pt}\\
-%     \begin{minipage}{0.49\textwidth}
-%         \begin{flushleft}
+%     \begin{minipage}{0.4\textwidth}
+%         \begin{center}
 %             \textbf{\Hod{}\\
 %             Head,\\
 %             Department of \Subject{},\\
 %             SVNIT, Surat}
-%         \end{flushleft}     
-%     \end{minipage}\begin{minipage}{0.49\textwidth}~\end{minipage}
+%         \end{center}     
+%     \end{minipage}
 % }{
-%     \begin{minipage}{0.49\textwidth}
+%     \begin{minipage}{0.4\textwidth}
 %         \textbf{\InternalSupervisor{}\\
 %         \InternalSupervisorPosition{},\\
 %         \InternalSupervisorDept{},\\
