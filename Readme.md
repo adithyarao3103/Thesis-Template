@@ -13,7 +13,7 @@ Further, add your acknowledgement and abstract to their respective `.tex` files 
 
 Create your thesis chapters in the folder `Chapters` in the form of `chapter#.tex` (i.e. `chapter1.tex`, `chapter2.tex`, ... ). Please stick to the naming convention. Set the `\numChapters` in the details.tex to the number of chapters. (Adding \newpage at the beginning and end of all the chapter#.tex files is suggested).
 
-If you have appendices, create `appendix#.tex` files in the folder `Appendix`, i.e `appendix1.tex`, `appendix2.tex`, ... and set the `\numAppendix` in the details.tex to the number of appendices. If you don't have any appendices, set `\numAppendix` to 0.
+If you have appendices, create `appendix#.tex` files in the folder `Appendix`, i.e `appendix1.tex`, `appendix2.tex`, ... and set the `\numAppendix` in the `details.tex` to the number of appendices. If you don't have any appendices, set `\numAppendix` to 0.
 
 Add your references as bibtex entries to the `references.bib` file in `metadata` folder.
 
