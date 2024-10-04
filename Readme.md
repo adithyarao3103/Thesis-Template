@@ -1,6 +1,6 @@
 # Dissertation Report Template, SVNIT
 
-The dissertation report template for SVNIT is written in simple latex, without creating horrendous classes or any stupid hell of codes. 
+The dissertation report template for SVNIT is written in simple latex, without creating horrendous classes or styles. 
 
 To get started, open the `details.tex` in `metadata` folder and edit the values of your title, name etc. If you have an external supervisor, add the certificate of completion provided by them in `assets` folder and rename it to `external_certificate.pdf`. If you don't have an external supervisor, comment out the line `\ExternalSupervisor` in the `details.tex` file.
 
