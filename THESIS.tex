@@ -132,9 +132,13 @@
 \includepatternloop{1}{\numAppendix{}}{appendix}{}{Appendix/}%
 \fi
 
-
+\ifbool{\AnnexureOne}{
 \newpage
 \thispagestyle{empty}
 \input{preamble/plagiarism_declaration.tex}
+}
+{
+
+}
 
 \end{document}

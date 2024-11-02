@@ -1,6 +1,6 @@
-# Dissertation Report Template, SVNIT
+# Dissertation Report Template
 
-The dissertation report template for SVNIT is written in simple latex, without creating horrendous classes or any stupid hell of codes. 
+The dissertation report template is written in simple latex, without creating horrendous classes or any stupid hell of codes. 
 
 To get started, open the `details.tex` in `metadata` folder and edit the values of your title, name etc. If you have an external supervisor, add the certificate of completion provided by them in `assets` folder and rename it to `external_certificate.pdf`. If you don't have an external supervisor, comment out the line `\ExternalSupervisor` in the `details.tex` file.
 
@@ -11,7 +11,7 @@ You can add your own `\usepackage` statements to `usepackages.tex` and also your
 
 Further, add your acknowledgement and abstract to their respective `.tex` files in the `metadata` folder.
 
-Create your thesis chapters in the folder `Chapters` in the form of `chapter#.tex` (i.e. `chapter1.tex`, `chapter2.tex`, ... ). Please stick to the naming convention. Set the `\numChapters` in the details.tex to the number of chapters. (Adding \newpage at the beginning and end of all the chapter#.tex files is suggested).
+Create your thesis chapters in the folder `Chapters` in the form of `chapter#.tex` (i.e. `chapter1.tex`, `chapter2.tex`, ... ). Please stick to the naming convention. Set the `\numChapters` in the details.tex to the number of chapters. (Adding `\newpage` at the beginning and end of all the chapter#.tex files is suggested).
 
 If you have appendices, create `appendix#.tex` files in the folder `Appendix`, i.e `appendix1.tex`, `appendix2.tex`, ... and set the `\numAppendix` in the `details.tex` to the number of appendices. If you don't have any appendices, set `\numAppendix` to 0.
 
@@ -25,3 +25,41 @@ After this compile the `THESIS.tex` file to get the final pdf.
 
 > [!TIP]
 > The theme for chapter titles is set by the `fncychap` package. Make changes [here](metadata/usepackages.tex#L19) to change the theme. To find what themes are available, [check this document](http://mirrors.ctan.org/macros/latex/contrib/fncychap/fncychap.pdf). To use the default LaTeX theme, comment out the line.
+
+## Output
+
+### Cover Page
+
+![Cover Page](PDF_Pages_For_Readme\THESIS_page-0001.jpg)
+
+### Declaraton Page
+
+![Declaration Page](PDF_Pages_For_Readme\THESIS_page-0002.jpg)
+
+### Certificate Page
+
+![Certificate Page](PDF_Pages_For_Readme\THESIS_page-0004.jpg)
+
+### Table of Contents
+
+![Table of Contents](PDF_Pages_For_Readme\THESIS_page-0008.jpg)
+
+### Chapter Page
+
+![Chapter Page](PDF_Pages_For_Readme\THESIS_page-0009.jpg)
+
+### Reference Page
+
+![Reference Page](PDF_Pages_For_Readme\THESIS_page-0020.jpg)
+
+### List of Figures
+
+![List of Figures](PDF_Pages_For_Readme\THESIS_page-0018.jpg)
+
+### Appendix Page
+
+![Appendix Page](PDF_Pages_For_Readme\THESIS_page-0021.jpg)
+
+### Annexure (For SVNIT Only)
+
+![Annexure Page](PDF_Pages_For_Readme\THESIS_page-0027.jpg)
