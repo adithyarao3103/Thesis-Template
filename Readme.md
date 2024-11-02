@@ -30,7 +30,7 @@ After this, compile the `THESIS.tex` file to get the final pdf.
 
 ### Cover Page
 
-![Cover Page](PDF_Pages_For_Readme\THESIS_page-0001.jpg)
+![Cover Page](\PDF_Pages_For_Readme\THESIS_page-0001.jpg)
 
 ### Declaraton Page
 
