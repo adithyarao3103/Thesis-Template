@@ -30,36 +30,36 @@ After this, compile the `THESIS.tex` file to get the final pdf.
 
 ### Cover Page
 
-![Cover Page](PDF_Pages_For_Readme\THESIS_page-0001.jpg)
+![Cover Page](PDF_Pages_For_Readme/THESIS_page-0001.jpg)
 
 ### Declaraton Page
 
-![Declaration Page](PDF_Pages_For_Readme\THESIS_page-0002.jpg)
+![Declaration Page](PDF_Pages_For_Readme/THESIS_page-0002.jpg)
 
 ### Certificate Page
 
-![Certificate Page](PDF_Pages_For_Readme\THESIS_page-0004.jpg)
+![Certificate Page](PDF_Pages_For_Readme/THESIS_page-0004.jpg)
 
 ### Table of Contents
 
-![Table of Contents](PDF_Pages_For_Readme\THESIS_page-0008.jpg)
+![Table of Contents](PDF_Pages_For_Readme/THESIS_page-0008.jpg)
 
 ### Chapter Page
 
-![Chapter Page](PDF_Pages_For_Readme\THESIS_page-0009.jpg)
+![Chapter Page](PDF_Pages_For_Readme/THESIS_page-0009.jpg)
 
 ### Reference Page
 
-![Reference Page](PDF_Pages_For_Readme\THESIS_page-0020.jpg)
+![Reference Page](PDF_Pages_For_Readme/THESIS_page-0020.jpg)
 
 ### List of Figures
 
-![List of Figures](PDF_Pages_For_Readme\THESIS_page-0018.jpg)
+![List of Figures](PDF_Pages_For_Readme/THESIS_page-0018.jpg)
 
 ### Appendix Page
 
-![Appendix Page](PDF_Pages_For_Readme\THESIS_page-0021.jpg)
+![Appendix Page](PDF_Pages_For_Readme/THESIS_page-0021.jpg)
 
 ### Annexure (For SVNIT Only)
 
-![Annexure Page](PDF_Pages_For_Readme\THESIS_page-0027.jpg)
+![Annexure Page](PDF_Pages_For_Readme/THESIS_page-0027.jpg)
