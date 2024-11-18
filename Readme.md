@@ -24,6 +24,9 @@ Add your references as bibtex entries to the `references.bib` file in `metadata`
 After this, compile the `THESIS.tex` file to get the final pdf.
 
 > [!TIP]
+> If you want to generate only the certificate pages, compile the onlyCertificates.tex file.
+
+> [!TIP]
 > The theme for chapter titles is set by the `fncychap` package. Make changes [here](metadata/usepackages.tex#L19) to change the theme. To find what themes are available, [check this document](http://mirrors.ctan.org/macros/latex/contrib/fncychap/fncychap.pdf). To use the default LaTeX theme, comment out the line.
 
 ## Output

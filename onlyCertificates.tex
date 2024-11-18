@@ -1,0 +1,73 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Created on 03-10-2023 %
+%                       %
+% Author: Adithya A Rao %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[12pt]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in, inner=1.5in ]{geometry}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage[normalem]{ulem}
+% \usepackage{hyperref}
+\usepackage{pdfpages}
+\usepackage{lipsum}
+\usepackage{tikz}
+\usepackage[numbers]{natbib}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage[T1]{fontenc}
+\usepackage[most]{tcolorbox}
+\usepackage{etoolbox}
+\usepackage{forloop}
+\usepackage{afterpage}
+\usepackage{fontspec}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{metadata/details.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setstretch{1.15}
+\setlength{\parindent}{0cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%preamble
+
+\pagenumbering{roman}
+\ifdef{\ExternalSupervisor}{
+\addtocontents{toc}{\protect \contentsline {chapter}{External Supervisor's Certificate}{ii}{}}
+}{}
+\include{preamble/declaration}
+\ifdef{\ExternalSupervisor}{
+\includepdf[pages=-]{assets/external_certificate.pdf}
+}{}
+\include{preamble/certificate}
+\include{preamble/examiner_certificate}
+
+\normalsize
+\onehalfspacing 
+
+\ifbool{\AnnexureOne}{
+\newpage
+\thispagestyle{empty}
+\input{preamble/plagiarism_declaration.tex}
+}
+{
+
+}
+
+\end{document}
